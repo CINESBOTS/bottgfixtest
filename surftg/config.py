@@ -12,7 +12,7 @@ class Telegram:
     PORT = int(getenv("PORT", 8080))
     SESSION_STRING = getenv("SESSION_STRING", "")
     BASE_URL = getenv("BASE_URL", "").rstrip('/') if getenv("BASE_URL") else ""
-    DATABASE_URL = getenv("MONGODB_URI", "")
+    DATABASE_URL = getenv("MONGODB_URI", "mongodb+srv://csclouddrive01:csclouddrive01@cluster0.x5ynaqj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     TMDB_API = getenv("TMDB_API", "")
     TMDB_LANGUAGE = getenv("TMDB_LANGUAGE", "en")
     AUTH_CHANNEL = [channel.strip() for channel in getenv("AUTH_CHANNEL", "").split(",") if channel.strip()]
