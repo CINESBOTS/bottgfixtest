@@ -1,0 +1,227 @@
+2025-11-07T22:46:20.503965+00:00 app[web.1]: RuntimeError: There is no current event loop in thread 'MainThread'.
+
+2025-11-07T22:46:20.705045+00:00 heroku[web.1]: Process exited with status 1
+
+2025-11-07T22:46:20.741144+00:00 heroku[web.1]: State changed from starting to crashed
+
+2025-11-07T22:56:48.401145+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cs-tg-bot-03----new-method-b08e501ce478.herokuapp.com request_id=a326d534-35d0-3091-4751-f8ed5e0fb1e6 fwd="" dyno= connect=0ms service=0ms status=503 bytes=567 protocol=http1.1 tls=true tls_version=unknown
+
+2025-11-07T22:56:53.077751+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=cs-tg-bot-03----new-method-b08e501ce478.herokuapp.com request_id=a67de7e3-5f26-a4fd-6df0-8f30cf02fae3 fwd="" dyno= connect=0ms service=0ms status=503 bytes=567 protocol=http1.1 tls=true tls_version=unknown
+
+2025-11-07T22:57:16.684269+00:00 app[api]: Log session created by user hasadmanaj@proton.me
+
+2025-11-07T22:57:21.888441+00:00 heroku[web.1]: State changed from crashed to starting
+
+2025-11-07T22:57:24.473956+00:00 heroku[web.1]: Starting process with command `bash surf-tg.sh`
+
+2025-11-07T22:57:25.396995+00:00 app[web.1]: Python buildpack: Detected 1024 MB available memory and 8 CPU cores.
+
+2025-11-07T22:57:25.397017+00:00 app[web.1]: Python buildpack: Defaulting WEB_CONCURRENCY to 4 based on the available memory.
+
+2025-11-07T22:57:26.548543+00:00 app[web.1]: Traceback (most recent call last):
+
+2025-11-07T22:57:26.549379+00:00 app[web.1]: File "<frozen runpy>", line 198, in _run_module_as_main
+
+2025-11-07T22:57:26.549380+00:00 app[web.1]: File "<frozen runpy>", line 88, in _run_code
+
+2025-11-07T22:57:26.549383+00:00 app[web.1]: File "/app/surftg/__main__.py", line 5, in <module>
+
+2025-11-07T22:57:26.549384+00:00 app[web.1]: from pyrogram import idle
+
+2025-11-07T22:57:26.549384+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/__init__.py", line 42, in <module>
+
+2025-11-07T22:57:26.549390+00:00 app[web.1]: from .sync import idle, compose # pylint: disable=wrong-import-position
+
+2025-11-07T22:57:26.549390+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2025-11-07T22:57:26.549391+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 100, in <module>
+
+2025-11-07T22:57:26.549392+00:00 app[web.1]: wrap(Methods)
+
+2025-11-07T22:57:26.549392+00:00 app[web.1]: ~~~~^^^^^^^^^
+
+2025-11-07T22:57:26.549404+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 96, in wrap
+
+2025-11-07T22:57:26.549404+00:00 app[web.1]: async_to_sync(source, name)
+
+2025-11-07T22:57:26.549404+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+
+2025-11-07T22:57:26.549406+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 32, in async_to_sync
+
+2025-11-07T22:57:26.549407+00:00 app[web.1]: main_loop = asyncio.get_event_loop()
+
+2025-11-07T22:57:26.549417+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/uvloop/__init__.py", line 206, in get_event_loop
+
+2025-11-07T22:57:26.549417+00:00 app[web.1]: raise RuntimeError(
+
+2025-11-07T22:57:26.549417+00:00 app[web.1]: ...<2 lines>...
+
+2025-11-07T22:57:26.549418+00:00 app[web.1]: )
+
+2025-11-07T22:57:26.549438+00:00 app[web.1]: RuntimeError: There is no current event loop in thread 'MainThread'.
+
+2025-11-07T22:57:26.735530+00:00 heroku[web.1]: Process exited with status 1
+
+2025-11-07T22:57:26.762506+00:00 heroku[web.1]: State changed from starting to crashed
+
+2025-11-07T22:57:26.766008+00:00 heroku[web.1]: State changed from crashed to starting
+
+2025-11-07T22:57:29.151682+00:00 heroku[web.1]: Starting process with command `bash surf-tg.sh`
+
+2025-11-07T22:57:29.999883+00:00 app[web.1]: Python buildpack: Detected 1024 MB available memory and 8 CPU cores.
+
+2025-11-07T22:57:29.999905+00:00 app[web.1]: Python buildpack: Defaulting WEB_CONCURRENCY to 4 based on the available memory.
+
+2025-11-07T22:57:31.032066+00:00 app[web.1]: Traceback (most recent call last):
+
+2025-11-07T22:57:31.032847+00:00 app[web.1]: File "<frozen runpy>", line 198, in _run_module_as_main
+
+2025-11-07T22:57:31.032851+00:00 app[web.1]: File "<frozen runpy>", line 88, in _run_code
+
+2025-11-07T22:57:31.032852+00:00 app[web.1]: File "/app/surftg/__main__.py", line 5, in <module>
+
+2025-11-07T22:57:31.032852+00:00 app[web.1]: from pyrogram import idle
+
+2025-11-07T22:57:31.032864+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/__init__.py", line 42, in <module>
+
+2025-11-07T22:57:31.032887+00:00 app[web.1]: from .sync import idle, compose # pylint: disable=wrong-import-position
+
+2025-11-07T22:57:31.032887+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2025-11-07T22:57:31.032889+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 100, in <module>
+
+2025-11-07T22:57:31.032890+00:00 app[web.1]: wrap(Methods)
+
+2025-11-07T22:57:31.032890+00:00 app[web.1]: ~~~~^^^^^^^^^
+
+2025-11-07T22:57:31.032900+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 96, in wrap
+
+2025-11-07T22:57:31.032900+00:00 app[web.1]: async_to_sync(source, name)
+
+2025-11-07T22:57:31.032900+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+
+2025-11-07T22:57:31.032905+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 32, in async_to_sync
+
+2025-11-07T22:57:31.032905+00:00 app[web.1]: main_loop = asyncio.get_event_loop()
+
+2025-11-07T22:57:31.032905+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/uvloop/__init__.py", line 206, in get_event_loop
+
+2025-11-07T22:57:31.032906+00:00 app[web.1]: raise RuntimeError(
+
+2025-11-07T22:57:31.032906+00:00 app[web.1]: ...<2 lines>...
+
+2025-11-07T22:57:31.032907+00:00 app[web.1]: )
+
+2025-11-07T22:57:31.032908+00:00 app[web.1]: RuntimeError: There is no current event loop in thread 'MainThread'.
+
+2025-11-07T22:57:31.248775+00:00 heroku[web.1]: Process exited with status 1
+
+2025-11-07T22:57:31.273400+00:00 heroku[web.1]: State changed from starting to crashed
+
+2025-11-07T23:09:20.731911+00:00 heroku[web.1]: State changed from crashed to starting
+
+2025-11-07T23:09:23.425666+00:00 heroku[web.1]: Starting process with command `bash surf-tg.sh`
+
+2025-11-07T23:09:24.356636+00:00 app[web.1]: Python buildpack: Detected 1024 MB available memory and 8 CPU cores.
+
+2025-11-07T23:09:24.357237+00:00 app[web.1]: Python buildpack: Defaulting WEB_CONCURRENCY to 4 based on the available memory.
+
+2025-11-07T23:09:25.791965+00:00 app[web.1]: Traceback (most recent call last):
+
+2025-11-07T23:09:25.792677+00:00 app[web.1]: File "<frozen runpy>", line 198, in _run_module_as_main
+
+2025-11-07T23:09:25.792679+00:00 app[web.1]: File "<frozen runpy>", line 88, in _run_code
+
+2025-11-07T23:09:25.792683+00:00 app[web.1]: File "/app/surftg/__main__.py", line 5, in <module>
+
+2025-11-07T23:09:25.792684+00:00 app[web.1]: from pyrogram import idle
+
+2025-11-07T23:09:25.792685+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/__init__.py", line 42, in <module>
+
+2025-11-07T23:09:25.792686+00:00 app[web.1]: from .sync import idle, compose # pylint: disable=wrong-import-position
+
+2025-11-07T23:09:25.792687+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2025-11-07T23:09:25.792687+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 100, in <module>
+
+2025-11-07T23:09:25.792688+00:00 app[web.1]: wrap(Methods)
+
+2025-11-07T23:09:25.792688+00:00 app[web.1]: ~~~~^^^^^^^^^
+
+2025-11-07T23:09:25.792691+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 96, in wrap
+
+2025-11-07T23:09:25.792691+00:00 app[web.1]: async_to_sync(source, name)
+
+2025-11-07T23:09:25.792691+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+
+2025-11-07T23:09:25.792692+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 32, in async_to_sync
+
+2025-11-07T23:09:25.792692+00:00 app[web.1]: main_loop = asyncio.get_event_loop()
+
+2025-11-07T23:09:25.792699+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/uvloop/__init__.py", line 206, in get_event_loop
+
+2025-11-07T23:09:25.792699+00:00 app[web.1]: raise RuntimeError(
+
+2025-11-07T23:09:25.792699+00:00 app[web.1]: ...<2 lines>...
+
+2025-11-07T23:09:25.792701+00:00 app[web.1]: )
+
+2025-11-07T23:09:25.792719+00:00 app[web.1]: RuntimeError: There is no current event loop in thread 'MainThread'.
+
+2025-11-07T23:09:26.060789+00:00 heroku[web.1]: Process exited with status 1
+
+2025-11-07T23:09:26.099671+00:00 heroku[web.1]: State changed from starting to crashed
+
+2025-11-07T23:09:26.104126+00:00 heroku[web.1]: State changed from crashed to starting
+
+2025-11-07T23:09:28.465598+00:00 heroku[web.1]: Starting process with command `bash surf-tg.sh`
+
+2025-11-07T23:09:29.256989+00:00 app[web.1]: Python buildpack: Detected 1024 MB available memory and 8 CPU cores.
+
+2025-11-07T23:09:29.257002+00:00 app[web.1]: Python buildpack: Defaulting WEB_CONCURRENCY to 4 based on the available memory.
+
+2025-11-07T23:09:30.313850+00:00 app[web.1]: Traceback (most recent call last):
+
+2025-11-07T23:09:30.314755+00:00 app[web.1]: File "<frozen runpy>", line 198, in _run_module_as_main
+
+2025-11-07T23:09:30.314757+00:00 app[web.1]: File "<frozen runpy>", line 88, in _run_code
+
+2025-11-07T23:09:30.314757+00:00 app[web.1]: File "/app/surftg/__main__.py", line 5, in <module>
+
+2025-11-07T23:09:30.314758+00:00 app[web.1]: from pyrogram import idle
+
+2025-11-07T23:09:30.314761+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/__init__.py", line 42, in <module>
+
+2025-11-07T23:09:30.314769+00:00 app[web.1]: from .sync import idle, compose # pylint: disable=wrong-import-position
+
+2025-11-07T23:09:30.314770+00:00 app[web.1]: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2025-11-07T23:09:30.314770+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 100, in <module>
+
+2025-11-07T23:09:30.314771+00:00 app[web.1]: wrap(Methods)
+
+2025-11-07T23:09:30.314771+00:00 app[web.1]: ~~~~^^^^^^^^^
+
+2025-11-07T23:09:30.314775+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 96, in wrap
+
+2025-11-07T23:09:30.314775+00:00 app[web.1]: async_to_sync(source, name)
+
+2025-11-07T23:09:30.314776+00:00 app[web.1]: ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+
+2025-11-07T23:09:30.314779+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/pyrogram/sync.py", line 32, in async_to_sync
+
+2025-11-07T23:09:30.314780+00:00 app[web.1]: main_loop = asyncio.get_event_loop()
+
+2025-11-07T23:09:30.314781+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.13/site-packages/uvloop/__init__.py", line 206, in get_event_loop
+
+2025-11-07T23:09:30.314781+00:00 app[web.1]: raise RuntimeError(
+
+2025-11-07T23:09:30.314781+00:00 app[web.1]: ...<2 lines>...
+
+2025-11-07T23:09:30.314782+00:00 app[web.1]: )
+
+2025-11-07T23:09:30.314819+00:00 app[web.1]: RuntimeError: There is no current event loop in thread 'MainThread'.
+
+2025-11-07T23:09:30.521197+00:00 heroku[web.1]: Process exited with status 1
+
+2025-11-07T23:09:30.553527+00:00 heroku[web.1]: State changed from starting to crashed
