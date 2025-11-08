@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/cyberdevlk/imagecloud@main/cloudv2/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/cyberdevlk/imagecloud@main/cloudv2/favicon.ico"
+        type="image/x-icon">
+    <title>Login Now</title>
+
+	<link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
+    <style>
+	
+        body {
+    height: 100vh;
+    margin: 0;
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color for the entire body */
+        }
+
+			.container {
+    margin: auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #1e1e1e; /* Dark form background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
+}
+
+button {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+    background-color: #3a3a3a; /* Dark button background */
+    color: #ffffff; /* Light text color for button */
+    border: none; /* Remove border */
+    padding: 10px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #4a4a4a; /* Darker on hover */
+}
+
+a {
+    text-decoration: none;
+    color: #bb86fc; /* Light color for links */
+}
+
+.card {
+    align-items: center;
+    background-color: #1e1e1e; /* Dark card background */
+    color: #ffffff; /* Light text color for card */
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444; /* Dark scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666; /* Darker on hover */
+}
+
+
+    </style>
+</head>
+
+<body>
+		
+<nav class="navbar-brand" data-bs-theme="dark" style="margin-bottom: 1rem; padding: 10px;">
+    <div class="container" style="align-items: flex-center;">
+        <a class="navbar-brand" style="border: 0px;" href="/">
+            <img src="https://cdn.jsdelivr.net/gh/cyberdevlk/imagecloud@main/cloudv2/logo.png" alt="Logo" height="45">
+        </a>
+    </div>
+</nav>
+
+    </nav>
+    <div class="card bg-light mb-3" style="width: fit-content; margin: auto;">
+        <div class="card-header">CyberDev</div>
+    </div>
+    <div class="container">
+        <div class="alert alert-dismissible alert-danger error-popup" id="errorPopup">
+            <strong>Oh snap! <!-- Error --></strong>
+        </div>
+        <form id="signinForm" action="/login" method="post">
+            <input type="hidden" name="redirect_url" value="{{ redirect_url }}">
+            <fieldset>
+                <div class="inputBox">
+                    <label for="exampleInputUsername" class="form-label mt-4">Username</label>
+                    <input type="text" class="form-control" id="exampleInputUsername" name="username"
+                        placeholder="Enter username">
+                </div>
+                <div class="inputBox">
+                    <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                        placeholder="Password" autocomplete="off">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary inputBox">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <footer class="footer mt-auto py-3 text-muted text-center" style="color: white;">
+        <div class="container d-flex justify-content-center align-items-center" style="width: 100%; padding: 0 10px;">
+            <p class="float-end">
+            <p>Made with <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="red"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                </svg> by <a href="https://cyberdev.com" target="_blank">Cyber Dev</a><br>
+                &copy; 2024 <a href="https://cyberdev.com/cscloudv2" target="_blank">CSCLOUDV-2</a>. All Rights
+                Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    window.onload = function () {
+        var errorPopup = document.getElementById("errorPopup");
+        var errorMessage = errorPopup.querySelector("strong").innerText.trim();
+
+        if (errorMessage !== "Oh snap! Invalid username or password") {
+
+            errorPopup.style.display = "none";
+
+        }
+        if (errorMessage === "Oh snap! Invalid username or password") {
+            setTimeout(function () {
+                errorPopup.style.display = "none";
+            }, 5000);
+        }
+    };
+</script>
+
+
+</html>
